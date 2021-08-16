@@ -231,6 +231,8 @@ time {
 
 .thirty-minute-block {
     height: 4em;
+    padding-left: 4em;
+    padding-right: 0.4em;
 }
 
 
@@ -261,4 +263,23 @@ time {
 .plan-button {
     background-color: #edf6ff;
     color: #437fc7;
+}
+
+.event {
+    display: flex;
+    margin-top: -0.65em;
+}
+
+.event-bar {
+    border-radius: 3px 0 0 3px;
+    height: 100%;
+    width: 0.6em;
+    flex: 0.2
+}
+
+.event span {
+    border-radius: 0 5px 5px 0;
+    padding: 0.4em;
+    color: white;
+    flex: 6;
 }
