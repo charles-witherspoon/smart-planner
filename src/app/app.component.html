@@ -180,105 +180,20 @@
     <!-- Events -->
     <mat-card-content class="event-area">
 
-      <div class="thirty-minute-block"></div>
-      <div class="hour">
-        <div class="text mat-typography">8 AM</div>
-        <div class="line">
-          <mat-divider [ngStyle]="{'border-top-color': '#777'}" inset="true"></mat-divider>
+      <div *ngFor="let hour of hours">
+        <div class="hour-divider">
+          <div class="text mat-typography">{{ hour | date:'h a'}}</div>
+          <div class="line">
+            <mat-divider [ngStyle]="{'border-top-color': '#777'}" inset="true"></mat-divider>
+          </div>
         </div>
-      </div>
-      <div class="thirty-minute-block"></div>
-      <div class="thirty-minute-divider">
-        <mat-divider [ngStyle]="{'border-top-style': 'dotted'}" inset="true"></mat-divider>
-      </div>
-      <div class="thirty-minute-block"></div>
-      <div class="hour">
-        <div class="text mat-typography">9 AM</div>
-        <div class="line">
-          <mat-divider [ngStyle]="{'border-top-color': '#777'}" inset="true"></mat-divider>
+        <div class="thirty-minute-block"></div>
+        <div class="thirty-minute-divider">
+          <mat-divider [ngStyle]="{'border-top-style': 'dotted'}" inset="true"></mat-divider>
         </div>
+        <div class="thirty-minute-block"></div>
       </div>
-      <div class="thirty-minute-block"></div>
-      <div class="thirty-minute-divider">
-        <mat-divider [ngStyle]="{'border-top-style': 'dotted'}" inset="true"></mat-divider>
-      </div>
-      <div class="thirty-minute-block"></div>
-      <div class="hour">
-        <div class="text mat-typography">10 AM</div>
-        <div class="line">
-          <mat-divider [ngStyle]="{'border-top-color': '#777'}" inset="true"></mat-divider>
-        </div>
-      </div>
-      <div class="thirty-minute-block"></div>
-      <div class="thirty-minute-divider">
-        <mat-divider [ngStyle]="{'border-top-style': 'dotted'}" inset="true"></mat-divider>
-      </div>
-      <div class="thirty-minute-block"></div>
-      <div class="hour">
-        <div class="text mat-typography">11 AM</div>
-        <div class="line">
-          <mat-divider [ngStyle]="{'border-top-color': '#777'}" inset="true"></mat-divider>
-        </div>
-      </div>
-      <div class="thirty-minute-block"></div>
-      <div class="thirty-minute-divider">
-        <mat-divider [ngStyle]="{'border-top-style': 'dotted'}" inset="true"></mat-divider>
-      </div>
-      <div class="thirty-minute-block"></div>
-      <div class="hour">
-        <div class="text mat-typography">12 PM</div>
-        <div class="line">
-          <mat-divider [ngStyle]="{'border-top-color': '#777'}" inset="true"></mat-divider>
-        </div>
-      </div>
-      <div class="thirty-minute-block"></div>
-      <div class="thirty-minute-divider">
-        <mat-divider [ngStyle]="{'border-top-style': 'dotted'}" inset="true"></mat-divider>
-      </div>
-      <div class="thirty-minute-block"></div>
-      <div class="hour">
-        <div class="text mat-typography">1 PM</div>
-        <div class="line">
-          <mat-divider [ngStyle]="{'border-top-color': '#777'}" inset="true"></mat-divider>
-        </div>
-      </div>
-      <div class="thirty-minute-block"></div>
-      <div class="thirty-minute-divider">
-        <mat-divider [ngStyle]="{'border-top-style': 'dotted'}" inset="true"></mat-divider>
-      </div>
-      <div class="thirty-minute-block"></div>
-      <div class="hour">
-        <div class="text mat-typography">2 PM</div>
-        <div class="line">
-          <mat-divider [ngStyle]="{'border-top-color': '#777'}" inset="true"></mat-divider>
-        </div>
-      </div>
-      <div class="thirty-minute-block"></div>
-      <div class="thirty-minute-divider">
-        <mat-divider [ngStyle]="{'border-top-style': 'dotted'}" inset="true"></mat-divider>
-      </div>
-      <div class="thirty-minute-block"></div>
-      <div class="hour">
-        <div class="text mat-typography">3 PM</div>
-        <div class="line">
-          <mat-divider [ngStyle]="{'border-top-color': '#777'}" inset="true"></mat-divider>
-        </div>
-      </div>
-      <div class="thirty-minute-block"></div>
-      <div class="thirty-minute-divider">
-        <mat-divider [ngStyle]="{'border-top-style': 'dotted'}" inset="true"></mat-divider>
-      </div>
-      <div class="thirty-minute-block"></div>
-      <div class="hour">
-        <div class="text mat-typography">4 PM</div>
-        <div class="line">
-          <mat-divider [ngStyle]="{'border-top-color': '#777'}" inset="true"></mat-divider>
-        </div>
-      </div>
-      <div class="thirty-minute-block"></div>
-      <div class="thirty-minute-divider">
-        <mat-divider [ngStyle]="{'border-top-style': 'dotted'}" inset="true"></mat-divider>
-      </div>
+
 
     </mat-card-content>
 

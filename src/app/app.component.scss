@@ -226,6 +226,7 @@ time {
 .event-area {
     background-color: #fff;
     border-radius: 5px;
+    padding-top: 0.6em;
 }
 
 .thirty-minute-block {
@@ -233,7 +234,7 @@ time {
 }
 
 
-.hour {
+.hour-divider {
     width: 100%;
     display: flex;
     flex-direction: row;
