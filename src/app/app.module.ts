@@ -5,16 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './modules/material-module/material.module';
-import { TasksComponent } from './components/tasks/tasks.component';
-import { CalendarComponent } from './components/calendar/calendar.component';
-import { EventsComponent } from './components/events/events.component';
+import { TaskComponent } from './components/task/task.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TasksComponent,
-    CalendarComponent,
-    EventsComponent,
+    TaskComponent
   ],
   imports: [
     BrowserModule,
