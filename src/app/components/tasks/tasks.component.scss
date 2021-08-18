@@ -1,0 +1,45 @@
+/***
+ *** Global
+ ***/
+ 
+ .task-item {
+     margin: 0.4em;
+    }
+    
+/***
+*** Card
+***/   
+mat-card:hover {
+    cursor: pointer;
+    background-color: #edf6ff;
+}
+    
+
+/***
+*** Checkbox
+***/
+mat-checkbox {
+    margin-right: 0.4em;
+    ::ng-deep .mat-checkbox-frame,
+    ::ng-deep .mat-checkbox-background {
+        border-radius: 50% !important;
+    }
+}
+
+
+mat-checkbox.mat-checkbox.mat-accent.mat-checkbox-checked {
+    margin-right: 0.4em;
+    ::ng-deep .mat-checkbox-frame,
+    ::ng-deep .mat-checkbox-background,
+    ::ng-deep .mat-ripple-element {
+        border-radius: 50% !important;
+        background-color: #c2edce !important;
+    }
+}
+
+mat-checkbox.mat-checkbox.mat-accent {
+    ::ng-deep .mat-ripple-element {
+        background-color: #c2edce !important;
+    }
+}
+
