@@ -21,16 +21,11 @@
 
     <!-- Tasks -->
     <mat-card-content class="task-area">
-
-      <mat-card *ngFor="let task of tasks" class="task-item">
-        <mat-checkbox [checked]="task.isComplete"></mat-checkbox>
-        <span>{{ task.title }}</span>
-      </mat-card>
-
+      <app-tasks></app-tasks>
     </mat-card-content>
 
     <mat-card-actions>
-      <button mat-button class="new-button mat-elevation-z4" id="task-button">New Task</button>
+      <button mat-button class="new-button mat-elevation-z4" id="task-button" (click)="addTask()">New Task</button>
     </mat-card-actions>
 
   </mat-card>

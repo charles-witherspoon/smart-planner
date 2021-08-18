@@ -1,106 +1,11 @@
 import { Component } from '@angular/core';
 import { Task } from './models/task';
 import { Event } from './models/event';
+import { MatDialog } from '@angular/material/dialog';
+import { TaskDialogComponent } from './components/dialog/task-dialog/task-dialog.component';
 
 
-const MOCK_TASKS = [
-  {
-    title: "Walk dog",
-    isComplete: false
-  },
-  {
-    title: "Get oil change",
-    isComplete: false
-  },
-  {
-    title: "Groceries",
-    isComplete: false
-  },
-  {
-    title: "Finish project 1",
-    isComplete: false
-  },
-  {
-    title: "Walk dog",
-    isComplete: false
-  },
-  {
-    title: "Get oil change",
-    isComplete: false
-  },
-  {
-    title: "Groceries",
-    isComplete: false
-  },
-  {
-    title: "Finish project 1",
-    isComplete: false
-  },
-  {
-    title: "Walk dog",
-    isComplete: false
-  },
-  {
-    title: "Get oil change",
-    isComplete: false
-  },
-  {
-    title: "Groceries",
-    isComplete: false
-  },
-  {
-    title: "Finish project 1",
-    isComplete: false
-  },
-  {
-    title: "Walk dog",
-    isComplete: false
-  },
-  {
-    title: "Get oil change",
-    isComplete: false
-  },
-  {
-    title: "Groceries",
-    isComplete: false
-  },
-  {
-    title: "Finish project 1",
-    isComplete: false
-  },
-  {
-    title: "Walk dog",
-    isComplete: false
-  },
-  {
-    title: "Get oil change",
-    isComplete: false
-  },
-  {
-    title: "Groceries",
-    isComplete: false
-  },
-  {
-    title: "Finish project 1",
-    isComplete: false
-  },
-  {
-    title: "Walk dog",
-    isComplete: false
-  },
-  {
-    title: "Get oil change",
-    isComplete: false
-  },
-  {
-    title: "Groceries",
-    isComplete: false
-  },
-  {
-    title: "Finish project 1",
-    isComplete: false
-  },
-];
+
 
 const MOCK_HOURS = [
   {
@@ -282,9 +187,15 @@ export interface Hour {
 })
 export class AppComponent {
   title = 'smart-planner';
-  tasks: Task[] = MOCK_TASKS;
   hours: Hour[] = MOCK_HOURS;
 
+  constructor(private dialog: MatDialog) {
+
+  }
+
+  addTask(): void {
+    this.dialog.open(TaskDialogComponent);
+  }
   // calculateEventWidth(event: Event): number {
   //   // get number events that would overlap
   //   const flatMap = (f: Function, arr: any[]) => arr.reduce((x, y) => [...x, ...f(y)], [])
