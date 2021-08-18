@@ -1,0 +1,47 @@
+.hour-divider {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;  
+}
+
+.text {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.line {
+    flex: 1;
+}
+  
+.thirty-minute-block {
+    height: 4em;
+    padding-left: 4em;
+    padding-right: 0.4em;
+}
+
+.event {
+    display: flex;
+    margin-top: -0.65em;
+}
+
+.event span {
+    border-radius: 0 5px 5px 0;
+    padding: 0.4em;
+    color: white;
+    flex: 6;
+}
+
+.event-bar {
+    border-radius: 3px 0 0 3px;
+    height: 100%;
+    width: 0.6em;
+    flex: 0.2
+}
+
+.thirty-minute-divider {
+    padding-left: 15px;
+    padding-right: 15px;  
+}

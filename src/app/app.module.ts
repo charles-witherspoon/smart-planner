@@ -9,12 +9,14 @@ import { TasksComponent } from './components/tasks/tasks.component';
 import { LogService } from './services/log.service';
 import { TaskDialogComponent } from './components/dialog/task-dialog/task-dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EventsComponent } from './components/events/events.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TasksComponent,
-    TaskDialogComponent
+    TaskDialogComponent,
+    EventsComponent,
   ],
   imports: [
     BrowserModule,
