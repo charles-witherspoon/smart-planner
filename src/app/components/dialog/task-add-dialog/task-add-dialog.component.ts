@@ -34,13 +34,14 @@ export class TaskAddDialogComponent implements OnInit {
    * Adds a task to the list of current tasks
    */
   public createTask(): void {
-    this.logger.debug(LogType.Task, 'Creating new task');
 
     let task: Task = {
       id: uuid(),
       title: this.titleControl.value,
       isComplete: false
     }
+
+    this.logger.debug(LogType.Task, `Creating new task [Task: ${task.id}]`);
 
     this.taskService.addTask(task);
   }

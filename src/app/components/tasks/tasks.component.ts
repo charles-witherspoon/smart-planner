@@ -44,7 +44,12 @@ export class TasksComponent implements OnInit {
    * @param task Task to be edited
    */
   public onTaskClick(task: Task): void {
-    this.dialog.open(TaskEditDialogComponent);
+    this.dialog.open(TaskEditDialogComponent, {
+      data: {
+        task: task
+      },
+      panelClass: 'custom-modalbox'
+    });
   }
 
   /**

@@ -33,23 +33,14 @@ export class Day {
      */
     private static generateHours(date: Date): Hour[] {
 
-        console.log(date);
-
-
         let midnight: Date = date;
         midnight.setHours(0, 0, 0, 0);
-
-
-        console.log(midnight);
-
 
         let current: Time = {
             hours: midnight.getHours(),
             minutes: 0
         }
 
-
-        console.log(current);
         let hours: Hour[] = [];
 
         for (let i = 0; i < 24; i++) {
@@ -62,10 +53,8 @@ export class Day {
             });
 
             current.hours = current.hours + 1;
-            console.log(current);
         }
 
-        console.log(hours)
         return hours;
     }
 

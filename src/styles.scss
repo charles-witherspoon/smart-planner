@@ -1,3 +1,24 @@
+/* Custom Colors */
+
+:root {
+    --background-color: #edf6ff;
+    --secondary-background-color: #f4f5fb;
+    --ternary-background-color: #bdbfc7;
+    --quaternary-background-color: #fff;
+    
+    --primary-color: #6daffe;
+    --secondary-color: #437fc7;
+
+    --primary-button-color: #b9732f;
+    --secondary-button-color: var(--background-color);
+
+    --checked-button-color: #c2edce;
+    
+    --light-text-color: #fff;
+    --dark-text-color: var(--secondary-color);
+
+}
+
 html, body { 
     height: 100%; 
 }
@@ -5,5 +26,5 @@ html, body {
 body { 
     margin: 0; 
     font-family: Roboto, "Helvetica Neue", sans-serif; 
-    background-color: #edf6ff;
+    background-color: var(--background-color);
 }

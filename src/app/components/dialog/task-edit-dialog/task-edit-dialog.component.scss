@@ -1,0 +1,19 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
+}
+
+h2 {
+    text-align: center;
+}
+
+mat-dialog-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button.update {
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+}
