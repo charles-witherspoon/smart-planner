@@ -4,6 +4,7 @@ import { LogType } from 'src/app/models/log-type';
 import { Task } from 'src/app/models/task';
 import { LogService } from 'src/app/services/log.service';
 import { TaskService } from 'src/app/services/task.service';
+import { v4 as uuid } from 'uuid';
 
 @Component({
   selector: 'app-task-dialog',
@@ -21,19 +22,28 @@ export class TaskDialogComponent implements OnInit {
   });
 
   //#endregion
+
   constructor(private logger: LogService, private taskService: TaskService) { }
 
   ngOnInit(): void {
   }
 
-  createTask(): void {
+  //#region Public Methods
+
+  /**
+   * Adds a task to the list of current tasks
+   */
+  public createTask(): void {
     this.logger.debug(LogType.Task, 'Creating new task');
 
     let task: Task = {
+      id: uuid(),
       title: this.titleControl.value,
       isComplete: false
     }
 
     this.taskService.addTask(task);
   }
+
+  //#endregion
 }

@@ -1,21 +1,26 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Task } from '../models/task';
+import { v4 as uuid } from 'uuid';
 
 const MOCK_TASKS = [
   {
+    id: uuid(),
     title: "Walk dog",
     isComplete: false
   },
   {
+    id: uuid(),
     title: "Get oil change",
     isComplete: false
   },
   {
+    id: uuid(),
     title: "Groceries",
     isComplete: false
   },
   {
+    id: uuid(),
     title: "Finish project 1",
     isComplete: false
   },
@@ -56,5 +61,12 @@ export class TaskService {
     this._tasks.next(updatedTasks);
   }
 
+
+  public deleteTask(id: string): void {
+    let updatedTasks = this._tasks.getValue().filter(task => task.id != id);
+
+    updatedTasks.forEach(task => console.log(task.id))
+    this._tasks.next(updatedTasks);
+  }
   //#endregion
 }

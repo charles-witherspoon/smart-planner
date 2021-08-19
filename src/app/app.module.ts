@@ -11,6 +11,7 @@ import { TaskDialogComponent } from './components/dialog/task-dialog/task-dialog
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EventsComponent } from './components/events/events.component';
 import { TimePipe } from './pipes/time.pipe';
+import { TaskDeleteDialogComponent } from './components/dialog/task-delete-dialog/task-delete-dialog.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { TimePipe } from './pipes/time.pipe';
     TaskDialogComponent,
     EventsComponent,
     TimePipe,
+    TaskDeleteDialogComponent,
   ],
   imports: [
     BrowserModule,

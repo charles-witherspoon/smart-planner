@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Task } from 'src/app/models/task';
-import { LogType } from 'src/app/models/log-type';
 import { LogService } from 'src/app/services/log.service';
 import { TaskDialogComponent } from '../dialog/task-dialog/task-dialog.component';
 import { TaskService } from 'src/app/services/task.service';
 import { BehaviorSubject } from 'rxjs';
+import { TaskDeleteDialogComponent } from '../dialog/task-delete-dialog/task-delete-dialog.component';
 
 
 @Component({
@@ -40,10 +40,16 @@ export class TasksComponent implements OnInit {
   /**
    * Fired when a task is clicked
    */
-  onTaskClick(): void {
-    this.logger.debug(LogType.Task, 'Task clicked');
-
+  public onTaskClick(): void {
     this.dialog.open(TaskDialogComponent);
+  }
+
+  public onTaskDelete(task: Task): void {
+    this.dialog.open(TaskDeleteDialogComponent, {
+      data: {
+        id: task.id
+      }
+    });
   }
 
   //#endregion

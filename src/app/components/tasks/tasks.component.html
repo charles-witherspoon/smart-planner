@@ -1,4 +1,9 @@
 <mat-card *ngFor="let task of task$ | async" class="task-item" (click)="onTaskClick()">
-    <mat-checkbox [checked]="task.isComplete" (click)="$event.stopPropagation()"></mat-checkbox>
-    <span>{{ task.title }}</span>
+    <div>
+        <mat-checkbox [checked]="task.isComplete" (click)="$event.stopPropagation()"></mat-checkbox>
+        <span>{{ task.title }}</span>
+    </div>
+    <button mat-icon-button color="warn" (click)="onTaskDelete(task);$event.stopPropagation()">
+        <mat-icon>delete</mat-icon>
+    </button>
 </mat-card>

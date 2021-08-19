@@ -2,13 +2,11 @@ import { Injectable } from '@angular/core';
 import { LogType } from '../models/log-type';
 
 export enum LogLevel {
-  All = 0,
-  Debug = 1,
-  Info = 2,
-  Warn = 3,
-  Error = 4,
-  Fatal = 5,
-  Off = 6
+  All = "ALL",
+  Debug = "DEBUG",
+  Info = "INFO",
+  Warn = "WARN",
+  Error = "ERROR"
 }
 
 @Injectable({
@@ -16,17 +14,12 @@ export enum LogLevel {
 })
 export class LogService {
 
-
   //#region Public Properties
 
   /**
-   * All - 0
-   * Debug - 1
-   * Info - 2
-   * Warn - 3
-   * Error - 4
-   * Fatal - 5
-   * Off - 6
+   * The level of the log, used for filtering messages
+   * 
+   * All | Debug | Info | Warn | Error | Fatal | Off
    */
   level: LogLevel = LogLevel.All;
 
@@ -44,7 +37,7 @@ export class LogService {
    * @param type The area of the application the message pertains to
    * @param msg The log message
    */
-  log(type: LogType, msg: any): void {
+  public log(type: LogType, msg: any): void {
     this.addMessage(LogLevel.All, type, msg);
   }
 
@@ -54,7 +47,7 @@ export class LogService {
    * @param type The area of the application the message pertains to
    * @param msg The debug message
    */
-  debug(type: LogType, msg: any): void {
+  public debug(type: LogType, msg: any): void {
     this.addMessage(LogLevel.Debug, type, msg);
   }
 
@@ -64,7 +57,7 @@ export class LogService {
    * @param type The area of the application the message pertains to
    * @param msg The info message
    */
-  info(type: LogType, msg: any): void {
+  public info(type: LogType, msg: any): void {
     this.addMessage(LogLevel.Info, type, msg);
   }
 
@@ -74,7 +67,7 @@ export class LogService {
    * @param type The area of the application the message pertains to
    * @param msg The warning message
    */
-  warn(type: LogType, msg: any): void {
+  public warn(type: LogType, msg: any): void {
     this.addMessage(LogLevel.Warn, type, msg);
   }
 
@@ -84,18 +77,8 @@ export class LogService {
    * @param type The area of the application the message pertains to
    * @param msg The error message
    */
-  error(type: LogType, msg: any): void {
+  public error(type: LogType, msg: any): void {
     this.addMessage(LogLevel.Error, type, msg);
-  }
-
-  /**
-   * Adds a message to the log with LogLevel.FATAL
-   * 
-   * @param type The area of the application the message pertains to
-   * @param msg The fatal message
-   */
-  fatal(type: LogType, msg: any): void {
-    this.addMessage(LogLevel.Fatal, type, msg);
   }
 
   /**

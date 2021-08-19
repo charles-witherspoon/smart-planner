@@ -9,12 +9,17 @@
 /***
 *** Card
 ***/   
+mat-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 mat-card:hover {
     cursor: pointer;
     background-color: #edf6ff;
 }
-    
-
+ 
 /***
 *** Checkbox
 ***/
@@ -42,4 +47,5 @@ mat-checkbox.mat-checkbox.mat-accent {
         background-color: #c2edce !important;
     }
 }
+
 
