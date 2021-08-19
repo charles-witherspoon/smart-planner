@@ -7,14 +7,6 @@ import { LogService } from './services/log.service';
 import { LogType } from './models/log-type';
 
 
-
-
-
-export interface Hour {
-  date: Date;
-  events: Event[];
-}
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -29,6 +21,10 @@ export class AppComponent {
 
   addTask(): void {
     this.dialog.open(TaskDialogComponent);
+  }
+
+  planDay(): void {
+    this.logger.debug(LogType.Application, 'Plan day')
   }
 
   addEvent(): void {

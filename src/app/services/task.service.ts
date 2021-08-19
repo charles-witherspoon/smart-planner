@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, Subject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { Task } from '../models/task';
 
 const MOCK_TASKS = [
@@ -33,12 +33,15 @@ export class TaskService {
 
   constructor() { }
 
+
+  //#region Public Methods
+
   /**
    * Gets the list of current tasks
    * 
    * @returns List of current tasks
    */
-  getTasks(): BehaviorSubject<Task[]> {
+  get currentTasks(): BehaviorSubject<Task[]> {
     return this._tasks;
   }
 
@@ -47,9 +50,11 @@ export class TaskService {
    * 
    * @param task Task to be added
    */
-  addTask(task: Task): void {
+  public addTask(task: Task): void {
     let updatedTasks = this._tasks.getValue();
     updatedTasks.push(task);
     this._tasks.next(updatedTasks);
   }
+
+  //#endregion
 }

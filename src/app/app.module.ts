@@ -10,6 +10,7 @@ import { LogService } from './services/log.service';
 import { TaskDialogComponent } from './components/dialog/task-dialog/task-dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EventsComponent } from './components/events/events.component';
+import { TimePipe } from './pipes/time.pipe';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { EventsComponent } from './components/events/events.component';
     TasksComponent,
     TaskDialogComponent,
     EventsComponent,
+    TimePipe,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +26,7 @@ import { EventsComponent } from './components/events/events.component';
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [LogService],
   bootstrap: [AppComponent]

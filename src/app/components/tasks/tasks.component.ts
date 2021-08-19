@@ -21,21 +21,30 @@ export class TasksComponent implements OnInit {
   /**
    * List of tasks
    */
-  task$: BehaviorSubject<Task[]> = new BehaviorSubject<Task[]>([]);
+  public task$: BehaviorSubject<Task[]>;
 
   //#endregion
 
-  constructor(private logger: LogService, private dialog: MatDialog, private taskService: TaskService) { }
+  constructor(private logger: LogService, private dialog: MatDialog, private taskService: TaskService) {
+    this.task$ = new BehaviorSubject<Task[]>([]);
+  }
 
   ngOnInit(): void {
-    this.task$ = this.taskService.getTasks();
+    this.task$ = this.taskService.currentTasks;
   }
 
 
-  onClick(): void {
+  //#region Public Methods
+
+
+  /**
+   * Fired when a task is clicked
+   */
+  onTaskClick(): void {
     this.logger.debug(LogType.Task, 'Task clicked');
 
     this.dialog.open(TaskDialogComponent);
   }
 
+  //#endregion
 }
