@@ -13,6 +13,10 @@ import { EventsComponent } from './components/events/events.component';
 import { TimePipe } from './pipes/time.pipe';
 import { TaskDeleteDialogComponent } from './components/dialog/task-delete-dialog/task-delete-dialog.component';
 import { TaskEditDialogComponent } from './components/dialog/task-edit-dialog/task-edit-dialog.component';
+import { EventAddDialogComponent } from './components/dialog/event-add-dialog/event-add-dialog.component';
+import { DateService } from './services/date.service';
+import { EventService } from './services/event.service';
+import { TaskService } from './services/task.service';
 
 @NgModule({
   declarations: [
@@ -23,6 +27,7 @@ import { TaskEditDialogComponent } from './components/dialog/task-edit-dialog/ta
     TimePipe,
     TaskDeleteDialogComponent,
     TaskEditDialogComponent,
+    EventAddDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +37,12 @@ import { TaskEditDialogComponent } from './components/dialog/task-edit-dialog/ta
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [LogService],
+  providers: [
+    LogService,
+    DateService,
+    EventService,
+    TaskService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

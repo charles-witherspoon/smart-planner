@@ -1,0 +1,31 @@
+<h2>New Event</h2>
+<mat-divider></mat-divider>
+<form [formGroup]="eventForm" (ngSubmit)="createEvent()">
+    <mat-dialog-content>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Title</mat-label>
+            <input matInput [formControl]="titleControl" />
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Start Date</mat-label>
+            <input matInput type="datetime-local" [formControl]="startDateControl">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Duration</mat-label>
+            <input matInput type="number" [formControl]="durationControl">
+        </mat-form-field>
+
+        <p>Color</p>
+        <span *ngFor="let color of colors" name="color">
+            <input type="radio" [value]="color" [formControl]="colorControl">
+            <div class="color" [ngStyle]="{'background-color': color}"> </div>
+        </span>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button mat-raised-button mat-dialog-close>Cancel</button>
+        <button mat-raised-button mat-dialog-close type="submit" class="create">Create Event</button>
+    </mat-dialog-actions>
+</form>

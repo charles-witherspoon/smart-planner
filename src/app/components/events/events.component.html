@@ -7,9 +7,8 @@
     </div>
     <div class="thirty-minute-block" (click)="onClickTimeBlock()">
         <div *ngFor="let event of hour.events" class="event" [ngStyle]="{
-          'height': (event.duration / 30) * 100 + '%',
-          'width': event.width + '%',
-          'margin-left': event.offset + '%'
+          'height': 'calc(' + (event.duration / 30) * 100 + '% + ' + (( event.duration - (event.duration % 30)) / 30 ) * 0.65 + 'em)',
+          'margin-top': 'calc(' + (event.startDate.getMinutes() / 60 ) * 50 + '% - 0.65em)'
         }" (click)="onClickEvent(event)">
             <div class="event-bar" [ngStyle]="{'background-color': event.color}"></div>
             <span [ngStyle]="{'background-color': event.color, 'opacity': 0.5}">{{ event.title }}</span>

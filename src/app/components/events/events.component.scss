@@ -21,11 +21,20 @@
     height: 4em;
     padding-left: 4em;
     padding-right: 0.4em;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.thirty-minute-block:hover {
+    background-color: var(--background-color);
+    cursor: pointer;
 }
 
 .event {
+    flex: 1;
     display: flex;
-    margin-top: -0.65em;
+    // margin-top: -0.65em;
 }
 
 .event:hover {

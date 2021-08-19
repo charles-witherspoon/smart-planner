@@ -25,9 +25,11 @@ export class TaskDeleteDialogComponent implements OnInit {
    * Permanently removes a task from the task list
    */
   public deleteTask(): void {
-    this.logger.debug(LogType.Task, 'Deleting task');
+    const taskId: string = this.data.id;
 
-    this.taskService.deleteTask(this.data.id);
+    this.logger.debug(LogType.Task, `Deleting task [Task: ${taskId}]`);
+
+    this.taskService.deleteTask(taskId);
   }
 
   //#endregion

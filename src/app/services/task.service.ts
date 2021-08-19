@@ -56,9 +56,7 @@ export class TaskService {
    * @param task Task to be added
    */
   public addTask(task: Task): void {
-    let updatedTasks = this._tasks.getValue();
-    updatedTasks.push(task);
-    this._tasks.next(updatedTasks);
+    this._tasks.getValue().push(task);
   }
 
 
@@ -70,7 +68,6 @@ export class TaskService {
   public deleteTask(id: string): void {
     let updatedTasks = this._tasks.getValue().filter(task => task.id !== id);
 
-    updatedTasks.forEach(task => console.log(task.id))
     this._tasks.next(updatedTasks);
   }
 

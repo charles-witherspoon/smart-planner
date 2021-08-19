@@ -8,6 +8,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
 
 const Material = [
   MatToolbarModule,
@@ -18,7 +19,8 @@ const Material = [
   MatDividerModule,
   MatDialogModule,
   MatFormFieldModule,
-  MatInputModule
+  MatInputModule,
+  MatRadioModule
 ];
 
 
