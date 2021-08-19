@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Task } from 'src/app/models/task';
 import { LogService } from 'src/app/services/log.service';
-import { TaskDialogComponent } from '../dialog/task-dialog/task-dialog.component';
 import { TaskService } from 'src/app/services/task.service';
 import { BehaviorSubject } from 'rxjs';
 import { TaskDeleteDialogComponent } from '../dialog/task-delete-dialog/task-delete-dialog.component';
+import { TaskEditDialogComponent } from '../dialog/task-edit-dialog/task-edit-dialog.component';
+import { LogType } from 'src/app/models/log-type';
 
 
 @Component({
@@ -39,11 +40,26 @@ export class TasksComponent implements OnInit {
 
   /**
    * Fired when a task is clicked
+   * 
+   * @param task Task to be edited
    */
-  public onTaskClick(): void {
-    this.dialog.open(TaskDialogComponent);
+  public onTaskClick(task: Task): void {
+    this.dialog.open(TaskEditDialogComponent);
   }
 
+  /**
+   * Fired when checkbox is checked
+   * 
+   * @param task Task to mark as complete
+   */
+  public onCheck(task: Task): void {
+  }
+
+  /**
+   * Fired when delete is clicked
+   * 
+   * @param task Task to be deleted
+   */
   public onTaskDelete(task: Task): void {
     this.dialog.open(TaskDeleteDialogComponent, {
       data: {

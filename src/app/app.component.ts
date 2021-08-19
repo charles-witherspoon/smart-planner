@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
-import { Task } from './models/task';
-import { Event } from './models/event';
 import { MatDialog } from '@angular/material/dialog';
-import { TaskDialogComponent } from './components/dialog/task-dialog/task-dialog.component';
+import { TaskAddDialogComponent } from './components/dialog/task-add-dialog/task-add-dialog.component';
 import { LogService } from './services/log.service';
 import { LogType } from './models/log-type';
 
@@ -20,7 +18,7 @@ export class AppComponent {
   }
 
   addTask(): void {
-    this.dialog.open(TaskDialogComponent);
+    this.dialog.open(TaskAddDialogComponent);
   }
 
   planDay(): void {

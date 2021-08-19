@@ -7,11 +7,11 @@ import { TaskService } from 'src/app/services/task.service';
 import { v4 as uuid } from 'uuid';
 
 @Component({
-  selector: 'app-task-dialog',
-  templateUrl: './task-dialog.component.html',
-  styleUrls: ['./task-dialog.component.scss']
+  selector: 'app-task-add-dialog',
+  templateUrl: './task-add-dialog.component.html',
+  styleUrls: ['./task-add-dialog.component.scss']
 })
-export class TaskDialogComponent implements OnInit {
+export class TaskAddDialogComponent implements OnInit {
 
   //#region Form
 

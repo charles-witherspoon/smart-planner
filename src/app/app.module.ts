@@ -7,20 +7,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './modules/material-module/material.module';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { LogService } from './services/log.service';
-import { TaskDialogComponent } from './components/dialog/task-dialog/task-dialog.component';
+import { TaskAddDialogComponent } from './components/dialog/task-add-dialog/task-add-dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EventsComponent } from './components/events/events.component';
 import { TimePipe } from './pipes/time.pipe';
 import { TaskDeleteDialogComponent } from './components/dialog/task-delete-dialog/task-delete-dialog.component';
+import { TaskEditDialogComponent } from './components/dialog/task-edit-dialog/task-edit-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TasksComponent,
-    TaskDialogComponent,
+    TaskAddDialogComponent,
     EventsComponent,
     TimePipe,
     TaskDeleteDialogComponent,
+    TaskEditDialogComponent,
   ],
   imports: [
     BrowserModule,
