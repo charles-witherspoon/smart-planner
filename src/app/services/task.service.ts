@@ -62,11 +62,32 @@ export class TaskService {
   }
 
 
+  /**
+   * Removes a task from the list of current tasks
+   * 
+   * @param id Unique identifier of the task to be deleted
+   */
   public deleteTask(id: string): void {
-    let updatedTasks = this._tasks.getValue().filter(task => task.id != id);
+    let updatedTasks = this._tasks.getValue().filter(task => task.id !== id);
 
     updatedTasks.forEach(task => console.log(task.id))
     this._tasks.next(updatedTasks);
   }
+
+
+  /**
+   * Updates a task
+   * 
+   * @param task Task to be updated
+   */
+  public editTask(changes: Task): void {
+    let foundTask: Task | undefined = this._tasks.getValue().find(task => task.id === changes.id);
+
+    if (foundTask) {
+      foundTask.title = changes.title;
+      foundTask.isComplete = changes.isComplete;
+    }
+  }
+
   //#endregion
 }
