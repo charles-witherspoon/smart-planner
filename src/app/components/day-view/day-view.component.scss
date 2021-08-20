@@ -1,3 +1,13 @@
 .main-content {
     height: 90%;
+    display: flex;
+}
+
+.main-content app-tasks {
+    flex: 1;
+}
+
+.main-content app-day {
+    flex: 4;
+    margin-right: 2em;
 }
