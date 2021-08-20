@@ -1,28 +1,21 @@
-/* Custom Colors */
 
 :root {
-    --background-color: #9ac3ff;
-    --light-background-color: #d4e1f5;
-    --secondary-background-color: #c8deff;
-    --ternary-background-color: #5e6a97;
-    --quaternary-background-color: rgb(255, 255, 255);
     
-    --primary-color: #0b3568;
+    /* Custom Colors */
+    --primary-background-color: #edf6ff;
+    --light-background-color: #fff;
+    --cream-background-color: #f6f6f2;
+    --grey-background-color: #bdbfc7;
+    
+    --primary-color: #6daffe;
     --secondary-color: #437fc7;
-    
-    --background-color-opacity: rgba(154, 195, 255, 0.7);
-    --light-background-color-opacity: rgba(18, 192, 178, 0.658);
-    --primary-color-opacity: rgba(11, 53, 104, 0.7);
-    --secondary-color-opacity: rgba(98, 95, 255, 0.562);
-    --ternary-color-opacity: rgba(255, 110, 110, 0.24);
-    
-    --primary-button-color: #b9732f;
-    --secondary-button-color: var(--background-color);
 
-    --checked-button-color: #c2edce;
-    
     --light-text-color: #fff;
     --dark-text-color: var(--secondary-color);
+
+    --primary-button-color: #b9732f;
+    --secondary-button-color: var(--primary-background-color);
+    --checked-button-color: #c2edce;
 
 }
 
@@ -41,9 +34,6 @@ html, body {
 body { 
     margin: 0; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    // background-color: var(--background-color);
-    background: url('./assets/tech-background.jpg') no-repeat fixed center;
-    background-size: cover;
-
+    background-color: var(--primary-background-color);
 }
 

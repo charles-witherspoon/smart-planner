@@ -9,7 +9,7 @@
 .events {
     height: 100%;
     flex: 2;
-    background-color: var(--secondary-color-opacity);
+    background-color: var(--secondary-color);
 }
 
 .event-header {
@@ -33,7 +33,7 @@
 }
 
 .event-area {
-    background-color: var(--quaternary-background-color);
+    background-color: var(--cream-background-color);
     border-radius: 5px;
     padding-top: 0.6em;
     height: 85%;
@@ -55,7 +55,7 @@
 .plan-button {
     width: 125px;
     background-color: var(--secondary-button-color);
-    color: var(--secondary-color);
+    color: var(--dark-text-color);
 }
 
 app-events {
