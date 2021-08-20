@@ -7,7 +7,7 @@
                     <button mat-icon-button aria-label="Left arrow button to navigate to previous day">
                         <mat-icon>keyboard_arrow_left</mat-icon>
                     </button>
-                    <span>
+                    <span (click)="goToDay()">
                         TODAY
                     </span>
                     <button mat-icon-button aria-label="Right arrow button to navigate to next day">
@@ -22,8 +22,13 @@
         </mat-card-content>
 
         <mat-card-actions>
-            <button mat-button class="plan-button mat-elevation-z4" (click)="planDay()">Plan Day</button>
-            <button mat-button class="new-button mat-elevation-z4" (click)="addEvent()">New Event</button>
+            <button *ngIf="route === '/day'" mat-button class="calendar-button mat-elevation-z4"
+                (click)="goToCalendar()">Calendar View</button>
+
+            <div>
+                <button mat-button class="plan-button mat-elevation-z4" (click)="planDay()">Plan Day</button>
+                <button mat-button class="new-button mat-elevation-z4" (click)="addEvent()">New Event</button>
+            </div>
         </mat-card-actions>
 
     </mat-card>

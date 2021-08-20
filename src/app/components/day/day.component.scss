@@ -9,7 +9,7 @@
 .events {
     height: 100%;
     flex: 2;
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-color-opacity);
 }
 
 .event-header {
@@ -47,13 +47,13 @@
 }
 
 .new-button {
-   width: fit-content;
+    width: 125px;
     background-color: var(--primary-button-color);
     color: var(--light-text-color);
 }
 
 .plan-button {
-    width: fit-content;
+    width: 125px;
     background-color: var(--secondary-button-color);
     color: var(--secondary-color);
 }
@@ -66,9 +66,25 @@ mat-card-actions {
     padding: 0;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 mat-card-header {
     height: 7.5%;
+}
+
+mat-card-actions div {
+    flex: 3;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.calendar-button {
+    flex: 0.5;
+    min-width: 150px;
+    background-color: var(--checked-button-color);
+}
+
+mat-card-title span:hover {
+    cursor: pointer;
 }

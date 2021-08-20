@@ -1,16 +1,18 @@
 /***
  *** Global
  ***/
- 
-.task-item {
-    margin: 0.4em;
-}
-    
+
 
 .container {
     height: 100%;
+    min-width: 250px;
     padding: 0.6em;
 }
+
+mat-card {
+    padding: 0;
+}
+
 mat-card-header {
     justify-content: center;
     align-items: center;
@@ -26,12 +28,12 @@ mat-card-title {
 .tasks {
     height: 100%;
     flex: 1.5;
-    background-color: var(--primary-color);
+    background-color: var(--ternary-color-opacity);
+    color: var(--light-text-color);
 }
 
 .task-area {
     height: 85%;
-    background-color: var(--background-color);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -60,19 +62,25 @@ mat-card-title {
 
 
 /***
-*** Card
+*** Task Item
 ***/   
-mat-card.task-item {
+
+.task-item {
+    padding: 0.8em;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
 }
 
-mat-card.task-item:hover {
+.task-item:hover {
     cursor: pointer;
-    background-color: var(--background-color);
+    background-color: var(--secondary-color-opacity);
 }
  
+.task-item div .mat-checkbox {
+    margin-right: 0.5em;
+}
+
 /***
 *** Checkbox
 ***/
@@ -81,6 +89,7 @@ mat-checkbox {
     ::ng-deep .mat-checkbox-frame,
     ::ng-deep .mat-checkbox-background {
         border-radius: 50% !important;
+        border-color: var(--light-text-color);
     }
 }
 
@@ -110,5 +119,12 @@ mat-card-actions {
     padding: 0;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
 }
+
+.divider {
+    height: 0;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+}
+

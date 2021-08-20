@@ -10,17 +10,29 @@
 
         <!-- Tasks -->
         <mat-card-content class="task-area">
-            <mat-card *ngFor="let task of task$ | async" class="task-item" (click)="onTaskClick(task)">
-                <div>
-                    <mat-checkbox [checked]="task.isComplete" (change)="task.isComplete = !task.isComplete"
-                        (click)="onCheck(task);$event.stopPropagation()">
-                    </mat-checkbox>
-                    <span [ngClass]="{'completed' : task.isComplete}">{{ task.title }} </span>
+
+            <div *ngFor="let task of task$ | async" (click)="onTaskClick(task)">
+
+                <div class="task-item">
+
+                    <div>
+                        <mat-checkbox [checked]="task.isComplete" (change)="task.isComplete = !task.isComplete"
+                            (click)="onCheck(task);$event.stopPropagation()">
+                        </mat-checkbox>
+                        <span [ngClass]="{'completed' : task.isComplete}">{{ task.title }} </span>
+                    </div>
+
+                    <button mat-icon-button color="warn" (click)="onTaskDelete(task);$event.stopPropagation()">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+
                 </div>
-                <button mat-icon-button color="warn" (click)="onTaskDelete(task);$event.stopPropagation()">
-                    <mat-icon>delete</mat-icon>
-                </button>
-            </mat-card>
+
+                <div class="divider">
+                    <mat-divider inset="true"></mat-divider>
+                </div>
+            </div>
+
         </mat-card-content>
 
         <mat-card-actions>

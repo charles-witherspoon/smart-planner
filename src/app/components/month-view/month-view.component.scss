@@ -67,6 +67,7 @@ mat-card-header, mat-card-actions {
 
 .days button:hover {
     cursor: pointer;
+    border: solid 2px var(--primary-color-opacity);
 }
 
 div.month {
