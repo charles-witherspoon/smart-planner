@@ -21,6 +21,7 @@ import { EventRangeFilterPipe } from './pipes/event-range.filter.pipe';
 import { MonthViewComponent } from './components/month-view/month-view.component';
 import { DayViewComponent } from './components/day-view/day-view.component';
 import { DayComponent } from './components/day/day.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { DayComponent } from './components/day/day.component';
     MonthViewComponent,
     DayViewComponent,
     DayComponent,
+    CalendarComponent,
   ],
   imports: [
     BrowserModule,

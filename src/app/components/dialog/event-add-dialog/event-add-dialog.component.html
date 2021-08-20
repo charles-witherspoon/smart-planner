@@ -18,11 +18,19 @@
             <input matInput type="number" [formControl]="durationControl">
         </mat-form-field>
 
-        <p>Color</p>
+        <!-- <p>Color</p>
         <span *ngFor="let color of colors" name="color">
             <input type="radio" [value]="color" [formControl]="colorControl">
             <div class="color" [ngStyle]="{'background-color': color}"> </div>
-        </span>
+        </span> -->
+
+        <label id="color-label">Color</label>
+        <mat-radio-group aria-labelledby="color-label" class="color-group" [(ngModel)]="color">
+            <mat-radio-button class="color-radio-button" *ngFor="let color of colors" [value]="color">
+                <div class="color mat-elevation-z4" [ngStyle]="{'background-color': color}"> </div>
+            </mat-radio-button>
+        </mat-radio-group>
+
     </mat-dialog-content>
     <mat-dialog-actions>
         <button mat-raised-button mat-dialog-close>Cancel</button>

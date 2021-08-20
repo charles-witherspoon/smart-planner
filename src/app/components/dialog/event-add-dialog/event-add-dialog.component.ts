@@ -25,8 +25,10 @@ export class EventAddDialogComponent implements OnInit {
 
   public eventForm: FormGroup;
 
-  public colors: string[] =
-    ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'transparent'];
+  public color: string;
+
+  public colors: string[] = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'transparent'];
+
   //#endregion
 
   constructor(private logger: LogService, private eventService: EventService) {
@@ -34,7 +36,7 @@ export class EventAddDialogComponent implements OnInit {
     this.startDateControl = new FormControl('', [Validators.required]);
     this.durationControl = new FormControl('', [Validators.required]);
     this.colorControl = new FormControl('', [Validators.required]);
-
+    this.color = '';
     this.eventForm = new FormGroup({
       title: this.titleControl,
       startDate: this.startDateControl,

@@ -13,12 +13,4 @@ export class MonthViewComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  //#region Public Methods
-
-
-  public goToDay(): void {
-    this.router.navigate(['day']);
-  }
-
-  //#endregion
 }

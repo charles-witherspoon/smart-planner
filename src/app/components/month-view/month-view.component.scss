@@ -5,84 +5,14 @@
     height: 90%;
 }
 
-/** Panels */
-
-.new-button {
-    background-color: var(--primary-button-color);
-    color: var(--light-text-color);
-}
-
-mat-card-header, mat-card-actions {
-    // height: 7.5%;
-}
-
-
-
-
-
-/** Calendar Area */
-
-.calendar {
-    flex: 6;
-    padding-top: 1em;
-}
-
-.month {
-    text-align: center;
-}
-
-.calendar-title {
-    font-size: 2em;
-    font-weight: normal;
-}
-
-.day-of-week, 
-.days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-gap: 1em;
-    margin: 0 auto;
-    max-width: 72em;
-}
-
-.day-of-week > * {
-    text-align: center;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    color: var(--secondary-color);
-    font-size: 1.2em;
-}
-
-.days button {
-    background-color: var(--secondary-background-color);
-    border:none;
-    height: 12vw;
-    max-height: 125px;
-    position: relative;
-}
-
-.days button.different-month {
-    background-color: var(--ternary-background-color);
-}
-
-.days button:hover {
-    cursor: pointer;
-    border: solid 2px var(--primary-color-opacity);
-}
-
-div.month {
-    color: var(--secondary-color);
-    margin: 2em 0 1em;
-}
-
-time {
-    position: absolute;
-    top: 0.8em;
-    right: 0.8em;
-}
-
 app-tasks {
     flex: 1.5;
+}
+
+
+app-calendar {
+    flex: 6;
+    height: 100%;
 }
 
 app-day {

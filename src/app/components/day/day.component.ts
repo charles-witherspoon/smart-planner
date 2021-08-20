@@ -50,7 +50,6 @@ export class DayComponent implements OnInit {
     if (this.route === '/day') {
       this.router.navigate(['']);
     } else {
-
       this.router.navigate(['/day']);
     }
 
