@@ -36,7 +36,6 @@
     background-color: var(--quaternary-background-color);
     border-radius: 5px;
     padding-top: 0.6em;
-    border: solid 1px blue;
     height: 85%;
     overflow: auto;
     -ms-overflow-style: none;
@@ -48,13 +47,13 @@
 }
 
 .new-button {
-    flex: 1 1 0;
+   width: fit-content;
     background-color: var(--primary-button-color);
     color: var(--light-text-color);
 }
 
 .plan-button {
-    flex: 1 1 0;
+    width: fit-content;
     background-color: var(--secondary-button-color);
     color: var(--secondary-color);
 }
