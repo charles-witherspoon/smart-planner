@@ -1,8 +1,4 @@
 import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { TaskAddDialogComponent } from './components/dialog/task-add-dialog/task-add-dialog.component';
-import { LogService } from './services/log.service';
-import { LogType } from './models/log-type';
 
 
 @Component({
@@ -12,44 +8,5 @@ import { LogType } from './models/log-type';
 })
 export class AppComponent {
   title = 'smart-planner';
-
-  constructor(private logger: LogService, private dialog: MatDialog) {
-
-  }
-
-  addTask(): void {
-    this.dialog.open(TaskAddDialogComponent);
-  }
-
-  planDay(): void {
-    this.logger.debug(LogType.Application, 'Plan day')
-  }
-
-  addEvent(): void {
-    this.logger.debug(LogType.Application, 'Add event');
-  }
-  // calculateEventWidth(event: Event): number {
-  //   // get number events that would overlap
-  //   const flatMap = (f: Function, arr: any[]) => arr.reduce((x, y) => [...x, ...f(y)], [])
-  //   const allEvents: Event[] = flatMap([].concat, this.hours.map(hour => hour.events));
-  //   const overlappingEvents: Event[] = allEvents.filter(e => this.eventsOverlap(event, e));
-
-  //   // divide 100 by that number
-  //   return overlappingEvents.length > 0 ?
-  //     100 / overlappingEvents.length
-  //     : 100;
-  // }
-
-  // eventsOverlap(main: Event, test: Event): boolean {
-  //   const mainEnd: Date = main.startDate;
-  //   mainEnd.setUTCHours(main.startDate.getHours() + (main.duration / 60));
-
-  //   const testEnd: Date = test.startDate;
-  //   testEnd.setUTCHours(test.startDate.getHours() + (test.duration / 60));
-
-
-  //   return (test.startDate >= main.startDate && test.startDate <= mainEnd)
-  //     || (main.startDate >= test.startDate && main.startDate <= testEnd);
-  // }
 }
 

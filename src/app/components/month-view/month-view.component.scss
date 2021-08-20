@@ -1,0 +1,174 @@
+/** Main Content */
+
+.main-content  {
+    display: flex;
+    height: 90%;
+}
+
+/** Panels */
+
+.new-button {
+    background-color: var(--primary-button-color);
+    color: var(--light-text-color);
+}
+
+mat-card-header, mat-card-actions {
+    // height: 7.5%;
+}
+
+mat-card-header {
+    justify-content: center;
+    align-items: center;
+}
+
+mat-card-title {
+    color: var(--light-text-color);
+}
+
+mat-card-content {
+    height: 85%;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+mat-card-content::-webkit-scrollbar {
+    display: none;
+}
+
+mat-card-actions {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+
+
+
+/** Task Panel */
+
+.tasks {
+    flex: 1.5;
+    margin: 10px;
+    background-color: var(--primary-color);
+}
+
+.task-area {
+    background-color: var(--background-color);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+}
+
+
+
+#task-button {
+    margin-right: 8px;
+}
+
+
+/** Calendar Area */
+
+.calendar {
+    flex: 6;
+    padding-top: 1em;
+}
+
+.month {
+    text-align: center;
+}
+
+.calendar-title {
+    font-size: 2em;
+    font-weight: normal;
+}
+
+.day-of-week, 
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 1em;
+    margin: 0 auto;
+    max-width: 72em;
+}
+
+.day-of-week > * {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: var(--secondary-color);
+    font-size: 1.2em;
+}
+
+.days button {
+    background-color: var(--secondary-background-color);
+    border:none;
+    height: 12vw;
+    max-height: 125px;
+    position: relative;
+}
+
+.days button.different-month {
+    background-color: var(--ternary-background-color);
+}
+
+.days button:hover {
+    cursor: pointer;
+}
+
+div.month {
+    color: var(--secondary-color);
+    margin: 2em 0 1em;
+}
+
+time {
+    position: absolute;
+    top: 0.8em;
+    right: 0.8em;
+}
+
+
+
+
+/** Event Panel */
+
+.events {
+    flex: 2;
+    margin: 10px;
+    background-color: var(--secondary-color);
+}
+
+.event-header {
+    ::ng-deep .mat-card-header-text {
+        margin: 0;
+        padding: 0;
+        width: 0;
+    }
+}
+
+.event-title-wrapper {
+    width: 100%;
+}
+
+.event-title {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.event-area {
+    background-color: var(--quaternary-background-color);
+    border-radius: 5px;
+    padding-top: 0.6em;
+}
+
+
+.plan-button {
+    background-color: var(--secondary-button-color);
+    color: var(--secondary-color);
+}
