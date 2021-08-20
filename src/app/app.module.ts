@@ -19,6 +19,8 @@ import { EventService } from './services/event.service';
 import { TaskService } from './services/task.service';
 import { EventRangeFilterPipe } from './pipes/event-range.filter.pipe';
 import { MonthViewComponent } from './components/month-view/month-view.component';
+import { DayViewComponent } from './components/day-view/day-view.component';
+import { DayComponent } from './components/day/day.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { MonthViewComponent } from './components/month-view/month-view.component
     TimePipe,
     EventRangeFilterPipe,
     MonthViewComponent,
+    DayViewComponent,
+    DayComponent,
   ],
   imports: [
     BrowserModule,

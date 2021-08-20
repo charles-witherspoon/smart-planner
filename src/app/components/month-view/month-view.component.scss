@@ -132,43 +132,7 @@ time {
 }
 
 
-
-
-/** Event Panel */
-
-.events {
+app-day {
     flex: 2;
-    margin: 10px;
-    background-color: var(--secondary-color);
-}
-
-.event-header {
-    ::ng-deep .mat-card-header-text {
-        margin: 0;
-        padding: 0;
-        width: 0;
-    }
-}
-
-.event-title-wrapper {
-    width: 100%;
-}
-
-.event-title {
     height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.event-area {
-    background-color: var(--quaternary-background-color);
-    border-radius: 5px;
-    padding-top: 0.6em;
-}
-
-
-.plan-button {
-    background-color: var(--secondary-button-color);
-    color: var(--secondary-color);
 }
