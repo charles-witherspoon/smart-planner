@@ -26,7 +26,7 @@ export class EventAddDialogComponent implements OnInit {
   public eventForm: FormGroup;
 
   public colors: string[] =
-    ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+    ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'transparent'];
   //#endregion
 
   constructor(private logger: LogService, private eventService: EventService) {

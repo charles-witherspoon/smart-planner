@@ -4,6 +4,4 @@ export interface Event {
     startDate: Date;
     duration: number;
     color: string;
-    width?: number;
-    offset?: number;
 }

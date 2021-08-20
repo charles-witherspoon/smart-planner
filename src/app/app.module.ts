@@ -17,6 +17,7 @@ import { EventAddDialogComponent } from './components/dialog/event-add-dialog/ev
 import { DateService } from './services/date.service';
 import { EventService } from './services/event.service';
 import { TaskService } from './services/task.service';
+import { EventRangeFilterPipe } from './pipes/event-range.filter.pipe';
 
 @NgModule({
   declarations: [
@@ -24,10 +25,11 @@ import { TaskService } from './services/task.service';
     TasksComponent,
     TaskAddDialogComponent,
     EventsComponent,
-    TimePipe,
     TaskDeleteDialogComponent,
     TaskEditDialogComponent,
     EventAddDialogComponent,
+    TimePipe,
+    EventRangeFilterPipe,
   ],
   imports: [
     BrowserModule,

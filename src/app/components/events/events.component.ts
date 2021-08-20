@@ -7,7 +7,6 @@ import { LogType } from 'src/app/models/log-type';
 import { DateService } from 'src/app/services/date.service';
 import { LogService } from 'src/app/services/log.service';
 import { EventAddDialogComponent } from '../dialog/event-add-dialog/event-add-dialog.component';
-import { v4 as uuid } from 'uuid';
 
 
 @Component({

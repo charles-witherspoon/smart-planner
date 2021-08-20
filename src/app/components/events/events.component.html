@@ -1,21 +1,67 @@
+<!-- Hour -->
 <div *ngFor="let hour of hour$ | async">
+
     <div class="hour-divider">
         <div class="text mat-typography">{{ hour.time.hours | time }}</div>
         <div class="line">
             <mat-divider [ngStyle]="{'border-top-color': '#777'}" inset="true"></mat-divider>
         </div>
     </div>
-    <div class="thirty-minute-block" (click)="onClickTimeBlock()">
-        <div *ngFor="let event of hour.events" class="event" [ngStyle]="{
-          'height': 'calc(' + (event.duration / 30) * 100 + '% + ' + (( event.duration - (event.duration % 30)) / 30 ) * 0.65 + 'em)',
-          'margin-top': 'calc(' + (event.startDate.getMinutes() / 60 ) * 50 + '% - 0.65em)'
+
+    <!-- 15-Minute Interval: 0 - 15 -->
+
+    <div class="fifteen-minute-block" (click)="onClickTimeBlock()">
+        <div *ngFor="let event of hour.events | range:{start: 0, end: 15}" class="event" [ngStyle]="{
+          'height': 'calc(' + (event.duration / 15) * 100 + '%)'
         }" (click)="onClickEvent(event)">
             <div class="event-bar" [ngStyle]="{'background-color': event.color}"></div>
             <span [ngStyle]="{'background-color': event.color, 'opacity': 0.5}">{{ event.title }}</span>
         </div>
     </div>
+
     <div class="thirty-minute-divider">
         <mat-divider [ngStyle]="{'border-top-style': 'dotted'}" inset="true"></mat-divider>
     </div>
-    <div class="thirty-minute-block" (click)="onClickTimeBlock()"></div>
+
+    <!-- 15-Minute Interval: 15 - 30 -->
+
+    <div class="fifteen-minute-block" (click)="onClickTimeBlock()">
+        <div *ngFor="let event of hour.events | range:{start: 15, end: 30}" class="event" [ngStyle]="{
+            'height': 'calc(' + (event.duration / 15) * 100 + '%)'
+        }" (click)="onClickEvent(event)">
+            <div class="event-bar" [ngStyle]="{'background-color': event.color}"></div>
+            <span [ngStyle]="{'background-color': event.color, 'opacity': 0.5}">{{ event.title }}</span>
+        </div>
+    </div>
+
+    <div class="thirty-minute-divider">
+        <mat-divider [ngStyle]="{'border-top-style': 'dotted'}" inset="true"></mat-divider>
+    </div>
+
+    <!-- 15-Minute Interval: 30 - 45 -->
+
+    <div class="fifteen-minute-block" (click)="onClickTimeBlock()">
+        <div *ngFor="let event of hour.events | range:{start: 30, end: 45}" class="event" [ngStyle]="{
+            'height': 'calc(' + (event.duration / 15) * 100 + '%)'
+        }" (click)="onClickEvent(event)">
+            <div class="event-bar" [ngStyle]="{'background-color': event.color}"></div>
+            <span [ngStyle]="{'background-color': event.color, 'opacity': 0.5}">{{ event.title }}</span>
+        </div>
+    </div>
+
+    <div class="thirty-minute-divider">
+        <mat-divider [ngStyle]="{'border-top-style': 'dotted'}" inset="true"></mat-divider>
+    </div>
+
+    <!-- 15-Minute Interval: 45 - 60 -->
+
+    <div class="fifteen-minute-block" (click)="onClickTimeBlock()">
+        <div *ngFor="let event of hour.events | range:{start: 45, end: 60}" class="event" [ngStyle]="{
+            'height': 'calc(' + (event.duration / 15) * 100 + '%)'
+        }" (click)="onClickEvent(event)">
+            <div class="event-bar" [ngStyle]="{'background-color': event.color}"></div>
+            <span [ngStyle]="{'background-color': event.color, 'opacity': 0.5}">{{ event.title }}</span>
+        </div>
+    </div>
+
 </div>
