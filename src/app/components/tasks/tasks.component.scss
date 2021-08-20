@@ -2,20 +2,73 @@
  *** Global
  ***/
  
- .task-item {
-     margin: 0.4em;
-    }
+.task-item {
+    margin: 0.4em;
+}
     
+
+.container {
+    height: 100%;
+    padding: 0.6em;
+}
+mat-card-header {
+    justify-content: center;
+    align-items: center;
+    height: 7.5%;
+}
+
+mat-card-title {
+    color: var(--light-text-color);
+}
+
+/** Task Panel */
+
+.tasks {
+    height: 100%;
+    flex: 1.5;
+    background-color: var(--primary-color);
+}
+
+.task-area {
+    height: 85%;
+    background-color: var(--background-color);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.task-area::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+#task-button {
+    margin-right: 8px;
+    width: fit-content;
+    background-color: var(--primary-button-color);
+    color: var(--light-text-color);
+}
+
+
+
+
 /***
 *** Card
 ***/   
-mat-card {
+mat-card.task-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-mat-card:hover {
+mat-card.task-item:hover {
     cursor: pointer;
     background-color: var(--background-color);
 }
@@ -50,4 +103,12 @@ mat-checkbox.mat-checkbox.mat-accent {
 
 .completed {
     text-decoration: line-through;
+}
+
+
+mat-card-actions {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }

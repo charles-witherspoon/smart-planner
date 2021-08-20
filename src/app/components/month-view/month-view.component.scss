@@ -16,59 +16,8 @@ mat-card-header, mat-card-actions {
     // height: 7.5%;
 }
 
-mat-card-header {
-    justify-content: center;
-    align-items: center;
-}
-
-mat-card-title {
-    color: var(--light-text-color);
-}
-
-mat-card-content {
-    height: 85%;
-    overflow: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
 
 
-mat-card-content::-webkit-scrollbar {
-    display: none;
-}
-
-mat-card-actions {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-}
-
-
-
-
-/** Task Panel */
-
-.tasks {
-    flex: 1.5;
-    margin: 10px;
-    background-color: var(--primary-color);
-}
-
-.task-area {
-    background-color: var(--background-color);
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 0.6em;
-    padding-bottom: 0.6em;
-}
-
-
-
-#task-button {
-    margin-right: 8px;
-}
 
 
 /** Calendar Area */

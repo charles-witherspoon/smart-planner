@@ -1,11 +1,32 @@
-<mat-card *ngFor="let task of task$ | async" class="task-item" (click)="onTaskClick(task)">
-    <div>
-        <mat-checkbox [checked]="task.isComplete" (change)="task.isComplete = !task.isComplete"
-            (click)="onCheck(task);$event.stopPropagation()">
-        </mat-checkbox>
-        <span [ngClass]="{'completed' : task.isComplete}">{{ task.title }} </span>
-    </div>
-    <button mat-icon-button color="warn" (click)="onTaskDelete(task);$event.stopPropagation()">
-        <mat-icon>delete</mat-icon>
-    </button>
-</mat-card>
+<div class="container">
+    <mat-card class="tasks mat-elevation-z4">
+
+        <mat-card-header>
+            <mat-card-title>
+                <span>TASKS</span>
+            </mat-card-title>
+        </mat-card-header>
+
+
+        <!-- Tasks -->
+        <mat-card-content class="task-area">
+            <mat-card *ngFor="let task of task$ | async" class="task-item" (click)="onTaskClick(task)">
+                <div>
+                    <mat-checkbox [checked]="task.isComplete" (change)="task.isComplete = !task.isComplete"
+                        (click)="onCheck(task);$event.stopPropagation()">
+                    </mat-checkbox>
+                    <span [ngClass]="{'completed' : task.isComplete}">{{ task.title }} </span>
+                </div>
+                <button mat-icon-button color="warn" (click)="onTaskDelete(task);$event.stopPropagation()">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </mat-card>
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button mat-button class="new-button mat-elevation-z4" id="task-button" (click)="onAddTask()">New
+                Task</button>
+        </mat-card-actions>
+
+    </mat-card>
+</div>

@@ -1,10 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { LogType } from 'src/app/models/log-type';
-import { LogService } from 'src/app/services/log.service';
-import { EventAddDialogComponent } from '../dialog/event-add-dialog/event-add-dialog.component';
-import { TaskAddDialogComponent } from '../dialog/task-add-dialog/task-add-dialog.component';
 
 @Component({
   selector: 'app-month-view',
@@ -13,16 +8,13 @@ import { TaskAddDialogComponent } from '../dialog/task-add-dialog/task-add-dialo
 })
 export class MonthViewComponent implements OnInit {
 
-  constructor(private logger: LogService, private dialog: MatDialog, private router: Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   //#region Public Methods
 
-  public addTask(): void {
-    this.dialog.open(TaskAddDialogComponent);
-  }
 
   public goToDay(): void {
     this.router.navigate(['day']);

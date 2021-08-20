@@ -7,6 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 import { TaskDeleteDialogComponent } from '../dialog/task-delete-dialog/task-delete-dialog.component';
 import { TaskEditDialogComponent } from '../dialog/task-edit-dialog/task-edit-dialog.component';
 import { LogType } from 'src/app/models/log-type';
+import { TaskAddDialogComponent } from '../dialog/task-add-dialog/task-add-dialog.component';
 
 
 @Component({
@@ -71,6 +72,13 @@ export class TasksComponent implements OnInit {
         id: task.id
       }
     });
+  }
+
+  /**
+   * Fired when add task button is clicked
+   */
+  public onAddTask(): void {
+    this.dialog.open(TaskAddDialogComponent);
   }
 
   //#endregion
