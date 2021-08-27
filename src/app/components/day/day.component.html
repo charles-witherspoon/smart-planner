@@ -1,16 +1,22 @@
-<div class="container">
+<button *ngIf="viewMode === 'calendar'" class="day mat-elevation-z4" (click)="goToDay()">
+    <time [ngClass]="{'today': isToday$ | async }">{{calendarDay}}</time>
+</button>
+
+<div *ngIf="viewMode === 'day'" class="container">
     <mat-card class="events mat-elevation-z4">
 
         <mat-card-header class="event-header">
             <div class="event-title-wrapper">
                 <mat-card-title class="event-title">
-                    <button mat-icon-button aria-label="Left arrow button to navigate to previous day">
+                    <button mat-icon-button aria-label="Left arrow button to navigate to previous day"
+                        (click)="goToPreviousDay()">
                         <mat-icon>keyboard_arrow_left</mat-icon>
                     </button>
                     <span (click)="goToDay()">
-                        TODAY
+                        {{ ( isToday$ | async ) ? 'TODAY' : dateString | date:'fullDate' }}
                     </span>
-                    <button mat-icon-button aria-label="Right arrow button to navigate to next day">
+                    <button mat-icon-button aria-label="Right arrow button to navigate to next day"
+                        (click)="goToNextDay()">
                         <mat-icon>keyboard_arrow_right</mat-icon>
                     </button>
                 </mat-card-title>

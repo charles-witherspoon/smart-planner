@@ -5,8 +5,8 @@ import { MonthViewComponent } from './components/month-view/month-view.component
 
 const routes: Routes = [
   { path: '', component: MonthViewComponent },
-  // { path: '', component: DayViewComponent },
   { path: 'day', component: DayViewComponent },
+  { path: 'day/:viewMode', component: DayViewComponent },
 ];
 
 @NgModule({

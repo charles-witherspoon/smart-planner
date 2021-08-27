@@ -85,6 +85,48 @@ mat-card-actions div {
     background-color: var(--checked-button-color);
 }
 
+mat-card-title span {
+    text-align: center;
+}
+
 mat-card-title span:hover {
     cursor: pointer;
+}
+
+
+
+/**
+    Calendar Mode
+*/
+
+.day {
+    background-color: var(--cream-background-color);
+    border:none;
+    height: 12vw;
+    width: 100%;
+    max-height: 125px;
+    position: relative;
+}
+
+.day.different-month {
+    background-color: var(--grey-background-color);
+}
+
+.day:hover {
+    cursor: pointer;
+    border: solid 2px var(--grey-background-color);
+}
+
+time {
+    position: absolute;
+    top: 0.8em;
+    right: 0.8em;
+}
+
+.today {
+    background-color: var(--primary-color);
+    padding: 0.4em;
+    border-radius: 50%;
+    box-shadow: 0 2px 2px #aaa;
+    color: var(--light-text-color);
 }

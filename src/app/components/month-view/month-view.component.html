@@ -7,5 +7,5 @@
     <app-calendar></app-calendar>
 
     <!-- Event Panel -->
-    <app-day></app-day>
+    <app-day [viewMode]="'day'" [dateString]="(eventDay | async | date:'MMMM d, y, h:mm:ss a z') || ''"></app-day>
 </div>

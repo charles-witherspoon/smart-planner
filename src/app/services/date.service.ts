@@ -215,7 +215,10 @@ export class DateService {
   //#endregion
 
   constructor() {
-    this._currentDate = new BehaviorSubject<Date>(new Date());
+    let currentDate: Date = new Date();
+
+
+    this._currentDate = new BehaviorSubject<Date>(currentDate);
 
     const day: Day = new Day(this._currentDate.value);
     // this._currentDayAsHours = new BehaviorSubject<Hour[]>(day.hours);
@@ -257,7 +260,7 @@ export class DateService {
 
     console.log(event.startDate);
 
-    if (this.currentDate.getValue().getDate() !== event.startDate.getDate()) {
+    if (this.currentDate.getValue().toISOString().split('T')[0] !== event.startDate.toISOString().split('T')[0]) {
       return false;
     }
 
